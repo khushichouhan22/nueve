@@ -25,6 +25,7 @@ export function StudentDetailPanel({ student, onClose }: StudentDetailPanelProps
 
   React.useEffect(() => {
     if (student) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormData({
         name: student.name,
         phone: student.phone || "",

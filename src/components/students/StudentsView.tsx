@@ -15,6 +15,7 @@ export function StudentsView({ initialStudents }: { initialStudents: User[] }) {
     if (studentIdParam) {
       const student = initialStudents.find(s => s.id === studentIdParam);
       if (student) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setSelectedStudent(student);
       }
     }

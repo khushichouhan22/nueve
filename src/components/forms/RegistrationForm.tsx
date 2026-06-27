@@ -35,7 +35,7 @@ export function RegistrationForm() {
       } else {
         setError(result.error || "An error occurred");
       }
-    } catch (err) {
+    } catch {
       setError("Something went wrong. Please try again.");
     } finally {
       setIsLoading(false);

@@ -5,7 +5,7 @@ export function AttendanceTrendChart() {
     <div className="lg:col-span-4 flex flex-col">
       <div className="flex justify-between items-end border-b border-[#D8D4CC] pb-4 mb-6">
         <h2 className="font-bold text-[24px] leading-[1.3] tracking-[0.05em] text-[#1B1B1B]">Attendance Trend</h2>
-        <span className="text-[12px] font-semibold tracking-[0.1em] text-[#4C4546] uppercase">Oct '24</span>
+        <span className="text-[12px] font-semibold tracking-[0.1em] text-[#4C4546] uppercase">Oct &apos;24</span>
       </div>
       <div className="bg-[#FAF8F4] border border-[#D8D4CC] flex-grow p-6 flex flex-col relative overflow-hidden min-h-[300px]">
         {/* Minimalist SVG Chart Placeholder */}

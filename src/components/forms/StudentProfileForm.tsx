@@ -47,7 +47,7 @@ export function StudentProfileForm({ student }: { student: StudentData }) {
       } else {
         setMessage({ type: "error", text: result.error || "Failed to update profile." });
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "An unexpected error occurred." });
     } finally {
       setIsSubmitting(false);
