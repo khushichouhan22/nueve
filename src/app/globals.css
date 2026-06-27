@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-heading);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+}
+
+:root {
+  /* Neo-Registrar Palette */
+  --background: #fef4db; /* Cream */
+  --foreground: #000000; /* Solid Black */
+  
+  --card: #ffffff; /* Pure White */
+  --card-foreground: #000000;
+  
+  --primary: #bde2ca; /* Mint Green */
+  --primary-foreground: #000000;
+  
+  --secondary: #f2c94c; /* Mustard Yellow */
+  --secondary-foreground: #000000;
+  
+  --tertiary: #f4d8e8; /* Pastel Pink */
+  --tertiary-foreground: #000000;
+
+  --border: #000000;
+  --input: #ffffff;
+  --ring: #000000;
+
+  --radius: 0px;
+}
+
+.dark {
+  /* No dark mode defined for Neo-Brutalism in design specs, default to same */
+  --background: #fef4db;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --primary: #bde2ca;
+  --primary-foreground: #000000;
+  --secondary: #f2c94c;
+  --secondary-foreground: #000000;
+  --tertiary: #f4d8e8;
+  --tertiary-foreground: #000000;
+  --border: #000000;
+  --input: #ffffff;
+  --ring: #000000;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-black text-black;
+  }
+}
